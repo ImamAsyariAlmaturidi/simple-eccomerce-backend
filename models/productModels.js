@@ -12,7 +12,7 @@ const Product = sequelize.define('products', {
     primaryKey: true,
     autoIncrement: true
   },
-  name: {
+  title: {
     type: DataTypes.STRING
   },
   description: {
@@ -27,6 +27,8 @@ const Product = sequelize.define('products', {
   quantity: {
     type: DataTypes.INTEGER
   }
+}, {
+  timestamps: true // Menambahkan createdAt dan updatedAt secara otomatis
 });
 
 module.exports = {
